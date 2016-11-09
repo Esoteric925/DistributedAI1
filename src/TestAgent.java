@@ -7,15 +7,5 @@ public class TestAgent extends Agent {
 
     public static void main(String[] args) {
 
-
-        System.out.println("kukgithub");
-
-        System.out.println("hej araxi");
-
-        System.out.println("HEhe");
-
-        System.out.println("MEkhitarian");
-
-        System.out.println("a");
     }
 }
