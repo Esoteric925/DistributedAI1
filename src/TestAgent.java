@@ -9,7 +9,8 @@ public class TestAgent extends Agent {
 
 
         System.out.println("kukgithub");
-        
+
+        System.out.println("hej araxi");
 
     }
 }
