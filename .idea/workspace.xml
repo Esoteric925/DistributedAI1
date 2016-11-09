@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1053bfd-a0f2-43ed-884c-bac7bef83974" name="Default" comment="hehehe">
+    <list default="true" id="a1053bfd-a0f2-43ed-884c-bac7bef83974" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestAgent.java" afterPath="$PROJECT_DIR$/src/TestAgent.java" />
     </list>
     <list id="7390e16e-6f6c-4cb4-8026-8ef57ba7ac81" name="Never ever push" comment="" />
     <list id="212b2f8f-9aec-4cf8-963b-481ecb8517bb" name="never ever commit" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
-    <list id="d830aeb7-0399-42b0-9881-f9d7fd5d26a3" name="Rejected commit: Default" comment="hehehe">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestAgent.java" afterPath="$PROJECT_DIR$/src/TestAgent.java" />
-    </list>
+    <list id="d830aeb7-0399-42b0-9881-f9d7fd5d26a3" name="Rejected commit: Default" comment="hehehe" />
     <ignored path="DistributedAI1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="TestAgent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -396,7 +395,7 @@
       <updated>1478686519828</updated>
       <workItem from="1478686523391" duration="600000" />
       <workItem from="1478693263498" duration="188000" />
-      <workItem from="1478693900000" duration="1223000" />
+      <workItem from="1478693900000" duration="1471000" />
     </task>
     <task id="LOCAL-00001" summary="nt">
       <created>1478693300797</created>
@@ -440,15 +439,22 @@
       <option name="project" value="LOCAL" />
       <updated>1478694974789</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="hehehe">
+      <created>1478695132579</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1478695132579</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2011000" />
+    <option name="totallyTimeSpent" value="2259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -540,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding />
         </state>
       </provider>
