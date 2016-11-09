@@ -6,6 +6,6 @@ import jade.core.Agent;
 public class TestAgent extends Agent {
 
     public static void main(String[] args) {
-    System.out.print("hejhej");
+    System.out.print("hejhej111");
     }
 }
