@@ -462,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478695750202</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="tog bort allt">
+      <created>1478695765003</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1478695765003</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -517,7 +524,8 @@
     <MESSAGE value="la till asdff" />
     <MESSAGE value="hehehe" />
     <MESSAGE value="hej" />
-    <option name="LAST_COMMIT_MESSAGE" value="hej" />
+    <MESSAGE value="tog bort allt" />
+    <option name="LAST_COMMIT_MESSAGE" value="tog bort allt" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
