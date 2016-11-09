@@ -12,7 +12,5 @@ public class TestAgent extends Agent {
 
         System.out.println("hej araxi");
 
-        System.out.println("asdfasdf");
-
     }
 }
