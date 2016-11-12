@@ -6,6 +6,7 @@ import jade.core.behaviours.TickerBehaviour;
 import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
@@ -13,6 +14,7 @@ import jade.lang.acl.MessageTemplate;
 import jade.proto.SimpleAchieveREInitiator;
 
 
+import javax.naming.directory.SearchControls;
 import java.util.*;
 
 /**
@@ -59,6 +61,10 @@ public class ProfilerAgent extends Agent {
 
                         sd.setType("VirtualTour");
                         template.addServices(sd);
+                        SearchConstraints sc = new SearchConstraints();
+                        sc.setMaxResults(new Long(1));
+                        send(DFService.createSubscriptionMessage(myAgent, getDefaultDF(), template, sc));
+
 
                         try {
                             //find agents that provides the virtual tour service
@@ -82,11 +88,16 @@ public class ProfilerAgent extends Agent {
                             request.setReplyWith("request" + System.currentTimeMillis());
                             myAgent.send(request);
 
+                            System.out.println("We sent a message");
                             //Prepare the template to get request information
                             mt = MessageTemplate.and(MessageTemplate.MatchConversationId("create-virtual-tour"),
                                     MessageTemplate.MatchInReplyTo(request.getReplyWith()));
 
-                            myAgent.receive(mt);
+
+                            ACLMessage respond = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.INFORM));
+                           System.out.println("Content från tourguide är " + respond.getContent());
+                           // ACLMessage reply = myAgent.receive(mt);
+                           // System.out.println(reply.getContent());
 
                             myAgent.addBehaviour(new RequestPerformer(myAgent, request));
 

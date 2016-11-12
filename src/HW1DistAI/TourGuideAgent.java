@@ -15,12 +15,12 @@ import jade.lang.acl.MessageTemplate;
  */
 public class TourGuideAgent extends Agent {
 
-
+    String test = "test";
     private AID a1 = new AID("TourGuideAgent", AID.ISLOCALNAME);
 
-    protected void setup(){
+    protected void setup() {
 
-        DFAgentDescription dfd = new DFAgentDescription();
+        final DFAgentDescription dfd = new DFAgentDescription();
         dfd.setName(getAID());
         ServiceDescription sd = new ServiceDescription();
         sd.setType("VirtualTour");
@@ -28,27 +28,37 @@ public class TourGuideAgent extends Agent {
         dfd.addServices(sd);
         try {
             DFService.register(this, dfd);
-        }catch(FIPAException e){
+        } catch (FIPAException e) {
             e.printStackTrace();
         }
 
 
         addBehaviour(new CyclicBehaviour(this) {
-            ACLMessage receive = receive();
+            ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
 
             @Override
             public void action() {
-                if (receive != null){
-                    System.out.println("conversation ID är " + receive.getConversationId());
-                    ACLMessage agree = new ACLMessage(ACLMessage.AGREE);
-                MessageTemplate mt = MessageTemplate.and(MessageTemplate.MatchConversationId("create-virtual-tour"),
-                        MessageTemplate.MatchInReplyTo(agree.getReplyWith()));
-                addBehaviour(new RespondPerformer(myAgent, mt));
+                if (receive != null) {
 
+
+                   // ACLMessage agree = new ACLMessage(ACLMessage.AGREE);
+
+                    //MessageTemplate mt = MessageTemplate.and(MessageTemplate.MatchConversationId("create-virtual-tour"),
+                      //      MessageTemplate.MatchInReplyTo(agree.getReplyWith()));
+                    //addBehaviour(new RespondPerformer(myAgent, mt));
+                   // agree.setReplyWith(test);
+
+                    ACLMessage reply = receive.createReply();
+                    reply.setPerformative(ACLMessage.INFORM);
+                    reply.setContent(test);
+                    myAgent.send(reply);
+
+
+                }
             }
-        }});
+        });
 
         System.out.println("Hello " + a1.getName());
 
-}
+    }
 }
