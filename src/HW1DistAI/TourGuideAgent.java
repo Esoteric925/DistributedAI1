@@ -40,6 +40,9 @@ public class TourGuideAgent extends Agent {
             e.printStackTrace();
         }
 
+
+
+
         addBehaviour(new CyclicBehaviour(this) {
 
             ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
@@ -53,6 +56,8 @@ public class TourGuideAgent extends Agent {
                 if (receive != null) {
                   //  System.out.println("Agent "+getLocalName()+": REQUEST received from "+receive.getSender().getName()+". Action is "
                    //         +receive.getContent());
+
+
                     addBehaviour(new RespondPerformerTourGuideAgent(myAgent, template));
 
                    done();
@@ -91,9 +96,9 @@ public class TourGuideAgent extends Agent {
                     for(int i = 0; i < curatorAgents.length; i++) {
                         requestArtifacts.addReceiver(curatorAgents[i]);
                     }
-                  //  for (int i = 0; i < curatorAgents.length; i++) {
-                  //      System.out.println("Curator agent #" + i + " is " + curatorAgents[i].getName());
-                  //  }
+                    //  for (int i = 0; i < curatorAgents.length; i++) {
+                    //      System.out.println("Curator agent #" + i + " is " + curatorAgents[i].getName());
+                    //  }
                     requestArtifacts.setContent(receive.getContent());
                     requestArtifacts.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
                     requestArtifacts.setConversationId("request-artifacts");
@@ -111,7 +116,8 @@ public class TourGuideAgent extends Agent {
 
 
 
-     //   System.out.println("Hello " + a1.getName());
+
+        //   System.out.println("Hello " + a1.getName());
 
     }
 

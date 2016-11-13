@@ -9,6 +9,8 @@ import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 import jade.proto.SimpleAchieveREResponder;
 
+import java.util.ArrayList;
+
 /**
  * Created by Amir on 2016-11-12.
  */
@@ -25,7 +27,7 @@ public class RespondPerformerTourGuideAgent extends SimpleAchieveREResponder {
         ACLMessage reply = request.createReply();
         reply.setContent("hoa");
         reply.setPerformative(ACLMessage.AGREE);
-       // System.out.println("vi ska skicka " + reply.getContent());
+
         return reply;
     }
 
@@ -38,3 +40,4 @@ public class RespondPerformerTourGuideAgent extends SimpleAchieveREResponder {
 
 
 }
+

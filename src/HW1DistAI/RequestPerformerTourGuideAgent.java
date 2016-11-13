@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * Created by Amir on 2016-11-12.
  */
 public class RequestPerformerTourGuideAgent extends SimpleAchieveREInitiator {
+    ArrayList<String> a;
     public RequestPerformerTourGuideAgent(Agent a, ACLMessage msg) {
         super(a, msg);
     }
@@ -33,7 +34,7 @@ public class RequestPerformerTourGuideAgent extends SimpleAchieveREInitiator {
         try {
 //System.out.println("innan array");
             ArrayList<String> artifacts = (ArrayList) msg.getContentObject();
-
+            a = artifacts;
 
             for (int i = 0; i< artifacts.size(); i++){
 
@@ -48,4 +49,9 @@ public class RequestPerformerTourGuideAgent extends SimpleAchieveREInitiator {
 
         super.handleAgree(msg);
     }
+
+    public ArrayList<String> value(){
+    return  a;
+    }
+
 }

@@ -24,7 +24,6 @@ import java.util.*;
 public class ProfilerAgent extends Agent {
 
     private AID a1 = new AID("ProfilerAgent", AID.ISLOCALNAME);
-    boolean foundTour = false;
     String name;
     String gender;
     String age;
