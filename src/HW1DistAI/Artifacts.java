@@ -1,26 +1,33 @@
 package HW1DistAI;
 
-import jade.core.behaviours.TickerBehaviour;
+import java.io.Serializable;
 
 /**
  * Created by Amir on 2016-11-09.
  */
-public class Artifacts {
-    String Id;
-    String Type;
+public class Artifacts  {
+    String id;
+    String artist;
+    String type;
+    String year;
 
-    public Artifacts(String Id, String Type){
+    public Artifacts(String id, String artist, String type, String year){
 
-        this.Id = Id;
-        this.Type = Type;
+        this.id = id;
+        this.artist = artist;
+        this.type = type;
+        this.year = year;
     }
 
-    public String getId(){
-        return Id;
-    }
-
+    public String getId() { return id; }
     public String getType(){
-        return Type;
+        return type;
+    }
+    public String getArtist(){
+        return artist;
+    }
+    public String getYear(){
+        return year;
     }
 
 

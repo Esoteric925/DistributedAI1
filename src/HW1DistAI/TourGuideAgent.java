@@ -7,6 +7,7 @@ import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
 
@@ -17,7 +18,10 @@ public class TourGuideAgent extends Agent {
 
     String test = "test";
     private AID a1 = new AID("TourGuideAgent", AID.ISLOCALNAME);
-
+    MessageTemplate template = MessageTemplate.and(
+            MessageTemplate.MatchConversationId("requests-virtual-tour"),
+            MessageTemplate.MatchPerformative(ACLMessage.REQUEST)
+             );
     protected void setup() {
 
         final DFAgentDescription dfd = new DFAgentDescription();
@@ -36,29 +40,36 @@ public class TourGuideAgent extends Agent {
         addBehaviour(new CyclicBehaviour(this) {
             ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
 
+
             @Override
             public void action() {
+
                 if (receive != null) {
+                  //  System.out.println("Agent "+getLocalName()+": REQUEST received from "+receive.getSender().getName()+". Action is "
+                   //         +receive.getContent());
+                    addBehaviour(new RespondPerformerTourGuideAgent(myAgent, template));
 
 
-                   // ACLMessage agree = new ACLMessage(ACLMessage.AGREE);
-
-                    //MessageTemplate mt = MessageTemplate.and(MessageTemplate.MatchConversationId("create-virtual-tour"),
-                      //      MessageTemplate.MatchInReplyTo(agree.getReplyWith()));
-                    //addBehaviour(new RespondPerformer(myAgent, mt));
-                   // agree.setReplyWith(test);
-
-                    ACLMessage reply = receive.createReply();
-                    reply.setPerformative(ACLMessage.INFORM);
-                    reply.setContent(test);
-                    myAgent.send(reply);
-
+                   /* ACLMessage requestArtifacts = new ACLMessage(ACLMessage.REQUEST);
+                    requestArtifacts.setContent(receive.getContent());
+                    requestArtifacts.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+                    requestArtifacts.setConversationId("request-artifacts");
+                    addBehaviour(new RequestPerformerTourGuideAgent(myAgent, requestArtifacts)); */
 
                 }
             }
         });
 
-        System.out.println("Hello " + a1.getName());
 
+
+     //   System.out.println("Hello " + a1.getName());
+
+    }
+
+    private boolean checkAction(String msg) {
+        // Simulate a check by generating a random number
+
+
+        return (Math.random() > 0.2);
     }
 }

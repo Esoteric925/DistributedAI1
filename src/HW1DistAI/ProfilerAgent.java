@@ -2,26 +2,25 @@ package HW1DistAI;
 
 import jade.core.AID;
 import jade.core.Agent;
+import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.TickerBehaviour;
-import jade.core.behaviours.WakerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
+import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import jade.proto.SimpleAchieveREInitiator;
 
 
-import javax.naming.directory.SearchControls;
 import java.util.*;
 
 /**
  * Created by Amir and Araxi on 2016-11-09.
  */
 
-/*per, male, 15, davinci, nerd, hola, bandola*/
+    /*per, male, 15, davinci, nerd, hola, bandola*/
 public class ProfilerAgent extends Agent {
 
     private AID a1 = new AID("ProfilerAgent", AID.ISLOCALNAME);
@@ -84,27 +83,17 @@ public class ProfilerAgent extends Agent {
                                 request.addReceiver(tourGuideAgents[i]);
                             }
                             request.setContent(interest);
-                            request.setConversationId("create-virtual-tour");
-                            request.setReplyWith("request" + System.currentTimeMillis());
-                            myAgent.send(request);
+                            request.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+                            request.setConversationId("request-virtual-tour");
 
-                            System.out.println("We sent a message");
-                            //Prepare the template to get request information
-                            mt = MessageTemplate.and(MessageTemplate.MatchConversationId("create-virtual-tour"),
-                                    MessageTemplate.MatchInReplyTo(request.getReplyWith()));
+                            myAgent.addBehaviour(new RequestPerformerProfilerAgent(myAgent, request));
 
-
-                            ACLMessage respond = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.INFORM));
-                           System.out.println("Content från tourguide är " + respond.getContent());
-                           // ACLMessage reply = myAgent.receive(mt);
-                           // System.out.println(reply.getContent());
-
-                            myAgent.addBehaviour(new RequestPerformer(myAgent, request));
 
                         } catch (FIPAException e) {
                             e.printStackTrace();
                             System.out.println("Det blev fel");
                         }
+
                     }
                 });
 
@@ -112,16 +101,12 @@ public class ProfilerAgent extends Agent {
             System.out.println("Nothing to do.. lets terminate ");
             doDelete();
         }
-
-
-
-
-
     }
+
 
     protected void takeDown(){
+
         System.out.println("The agent " + a1.getName() + " will be terminated");
     }
-
 
 }
