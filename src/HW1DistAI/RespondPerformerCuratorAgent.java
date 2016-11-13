@@ -28,15 +28,16 @@ public class RespondPerformerCuratorAgent extends SimpleAchieveREResponder {
 
     @Override
     protected ACLMessage prepareResponse(ACLMessage request) throws NotUnderstoodException, RefuseException {
-     /*   artifacts.add(artifact1);
+        artifacts.add(artifact1);
         artifacts.add(artifact2);
         artifacts.add(artifact3);
         ArrayList<String> requestedArtifacts = new ArrayList<String>();
         ACLMessage reply = request.createReply();
+
         for(int i = 0; i < artifacts.size(); i ++){
-            if(artifacts.get(i).getArtist().equalsIgnoreCase(request.toString()) ||
-                    artifacts.get(i).getType().equalsIgnoreCase(request.toString()) ||
-                    artifacts.get(i).getYear().equalsIgnoreCase(request.toString())){
+            if(artifacts.get(i).getArtist().equalsIgnoreCase(request.getContent().toString()) ||
+                    artifacts.get(i).getType().equalsIgnoreCase(request.getContent().toString()) ||
+                    artifacts.get(i).getYear().equalsIgnoreCase(request.getContent().toString())){
 
                 requestedArtifacts.add(artifacts.get(i).getId());
 
@@ -46,13 +47,16 @@ public class RespondPerformerCuratorAgent extends SimpleAchieveREResponder {
         }
 
         try {
+
             reply.setContentObject(requestedArtifacts);
+
+          
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
 
-        ACLMessage reply = request.createReply();
-        reply.setContent("HEJ FRAN CURATOR");
+       // ACLMessage reply = request.createReply();
+       // reply.setContent("HEJ FRAN CURATOR");
         reply.setPerformative(ACLMessage.AGREE);
         return reply;
     }

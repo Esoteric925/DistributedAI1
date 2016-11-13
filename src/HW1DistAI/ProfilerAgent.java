@@ -20,7 +20,7 @@ import java.util.*;
  * Created by Amir and Araxi on 2016-11-09.
  */
 
-    /*per, male, 15, davinci, nerd, hola, bandola*/
+    /*per, male, 15, Davinci, nerd, hola, bandola*/
 public class ProfilerAgent extends Agent {
 
     private AID a1 = new AID("ProfilerAgent", AID.ISLOCALNAME);
@@ -55,19 +55,21 @@ public class ProfilerAgent extends Agent {
                 addBehaviour(new TickerBehaviour(this, 1000) {
                     protected void onTick() {
                         //check for a service called virtual tour
-                        DFAgentDescription template = new DFAgentDescription();
+                        DFAgentDescription dfd = new DFAgentDescription();
                         ServiceDescription sd = new ServiceDescription();
 
                         sd.setType("VirtualTour");
-                        template.addServices(sd);
+                        dfd.addServices(sd);
                         SearchConstraints sc = new SearchConstraints();
                         sc.setMaxResults(new Long(1));
-                        send(DFService.createSubscriptionMessage(myAgent, getDefaultDF(), template, sc));
+                        send(DFService.createSubscriptionMessage(myAgent, getDefaultDF(), dfd, sc));
 
 
                         try {
                             //find agents that provides the virtual tour service
-                            DFAgentDescription[] result = DFService.search(myAgent, template);
+                            DFAgentDescription[] result = DFService.search(myAgent, dfd);
+
+
                             tourGuideAgents = new AID[result.length];
 
                             for (int i = 0; i < tourGuideAgents.length; i++) {
@@ -85,10 +87,7 @@ public class ProfilerAgent extends Agent {
                             request.setContent(interest);
                             request.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
                             request.setConversationId("request-virtual-tour");
-
                             myAgent.addBehaviour(new RequestPerformerProfilerAgent(myAgent, request));
-
-
                         } catch (FIPAException e) {
                             e.printStackTrace();
                             System.out.println("Det blev fel");

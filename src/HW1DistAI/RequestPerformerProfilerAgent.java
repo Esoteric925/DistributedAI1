@@ -29,14 +29,14 @@ public class RequestPerformerProfilerAgent extends SimpleAchieveREInitiator{
 
     @Override
     protected void handleInform(ACLMessage msg) {
-        System.out.println("Vi är i handleInform" + msg.getContent());
+       // System.out.println("Vi är i handleInform" + msg.getContent());
         super.handleInform(msg);
     }
 
     @Override
     protected void handleAgree(ACLMessage msg) {
 
-        System.out.println("Message " + msg.getContent());
+        System.out.println("Message som mottogs i profiler agent " + msg.getContent());
         super.handleAgree(msg);
     }
 }

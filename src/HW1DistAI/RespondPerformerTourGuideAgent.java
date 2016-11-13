@@ -25,6 +25,7 @@ public class RespondPerformerTourGuideAgent extends SimpleAchieveREResponder {
         ACLMessage reply = request.createReply();
         reply.setContent("hoa");
         reply.setPerformative(ACLMessage.AGREE);
+       // System.out.println("vi ska skicka " + reply.getContent());
         return reply;
     }
 

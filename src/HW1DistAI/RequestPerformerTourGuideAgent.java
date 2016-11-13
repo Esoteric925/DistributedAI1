@@ -18,6 +18,7 @@ public class RequestPerformerTourGuideAgent extends SimpleAchieveREInitiator {
     @Override
     protected ACLMessage prepareRequest(ACLMessage msg) {
 
+    // System.out.println("Vi är i tourguide och ska skicka ett msg till curator som är " + msg.getContent());
         return super.prepareRequest(msg);
     }
 
@@ -29,17 +30,20 @@ public class RequestPerformerTourGuideAgent extends SimpleAchieveREInitiator {
     @Override
     protected void handleAgree(ACLMessage msg) {
 
-       /* try {
-            ArrayList<String> artifacts = (ArrayList<String>) msg.getContentObject();
+        try {
+//System.out.println("innan array");
+            ArrayList<String> artifacts = (ArrayList) msg.getContentObject();
+
 
             for (int i = 0; i< artifacts.size(); i++){
 
                 System.out.println("Listan innehåller " + artifacts.get(i));
             }
+           // System.out.println("efter array med artifacts size som är " + artifacts.size());
         } catch (UnreadableException e) {
             e.printStackTrace();
-        }*/
-       System.out.println("Meddelandet från curator är: " + msg.getContent());
+        }
+     //  System.out.println("Meddelandet som mottogs i tour guide agent är: " + msg.getContent());
 
 
         super.handleAgree(msg);
