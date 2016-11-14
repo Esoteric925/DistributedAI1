@@ -1,20 +1,24 @@
 package HW1DistAI;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.Behaviour;
-import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
+import jade.core.behaviours.ParallelBehaviour;
+import jade.core.behaviours.SequentialBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAAgentManagement.*;
 import jade.domain.FIPAException;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import jade.lang.acl.UnreadableException;
 import jade.proto.SimpleAchieveREResponder;
 
 import java.io.IOException;
+import java.io.NotSerializableException;
 import java.util.ArrayList;
+import java.util.logging.SocketHandler;
 
 /**
  * Created by Amir on 2016-11-09.
@@ -24,10 +28,11 @@ public class CuratorAgent extends Agent {
 
    private AID a1 = new AID("CuratorAgent", AID.ISLOCALNAME);
 
-    MessageTemplate template = MessageTemplate.and(
+    MessageTemplate templateTourGuide = MessageTemplate.and(
             MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
-            MessageTemplate.MatchPerformative(ACLMessage.REQUEST)
-    );
+            MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
+
+    MessageTemplate templateProfiler = MessageTemplate.and( MessageTemplate.MatchConversationId("from-profiler"), MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
 
     protected void setup(){
 
@@ -44,30 +49,30 @@ public class CuratorAgent extends Agent {
         } catch (FIPAException e) {
             e.printStackTrace();
         }
+        SequentialBehaviour s = new SequentialBehaviour();
+        ParallelBehaviour p = new ParallelBehaviour();
+        p.addSubBehaviour(new RespondToTourGuideAgent(this, templateTourGuide));
+        p.addSubBehaviour(new RespondToProfilerAgent(this, templateProfiler));
 
-
-                    addBehaviour(new RespondPerformerCuratorAgent(this, template));
-
-
-
-
-
+        s.addSubBehaviour(p);
+        addBehaviour(s);
 
     }
 
-    private class RespondPerformerCuratorAgent extends SimpleAchieveREResponder {
-        Artifacts artifact1 = new Artifacts("Painting1", "Davinci" , "Flowers", "1800");
-        Artifacts artifact2 = new Artifacts("Painting2", "Davinci" , "Mona Lisa", "1800");
-        Artifacts artifact3 = new Artifacts("Painting3", "Picasso" , "La Vie", "1900");
-        ArrayList<Artifacts> artifacts = new ArrayList<Artifacts>();
+    private class RespondToTourGuideAgent extends SimpleAchieveREResponder {
 
-        public RespondPerformerCuratorAgent(Agent a, MessageTemplate mt) {
+
+        public RespondToTourGuideAgent(Agent a, MessageTemplate mt) {
             super(a, mt);
         }
 
 
         @Override
         protected ACLMessage prepareResponse(ACLMessage request) throws NotUnderstoodException, RefuseException {
+            Artifacts artifact1 = new Artifacts("Painting1", "Davinci" , "Flowers", "1800");
+            Artifacts artifact2 = new Artifacts("Painting2", "Davinci" , "Mona Lisa", "1800");
+            Artifacts artifact3 = new Artifacts("Painting3", "Picasso" , "La Vie", "1900");
+            ArrayList<Artifacts> artifacts = new ArrayList<Artifacts>();
             System.out.println("VI är i prepare response i curartor agent");
             artifacts.add(artifact1);
             artifacts.add(artifact2);
@@ -101,4 +106,58 @@ public class CuratorAgent extends Agent {
             return response;
         }
     }
+
+    private class RespondToProfilerAgent extends SimpleAchieveREResponder {
+
+        Artifacts artifact1 = new Artifacts("Painting1", "Davinci" , "Flowers", "1800");
+        Artifacts artifact2 = new Artifacts("Painting2", "Davinci" , "Mona Lisa", "1800");
+        Artifacts artifact3 = new Artifacts("Painting3", "Picasso" , "La Vie", "1900");
+        ArrayList<Artifacts> artifacts = new ArrayList<Artifacts>();
+
+
+        public RespondToProfilerAgent(Agent a, MessageTemplate mt) {
+            super(a, mt);
+        }
+
+
+        @Override
+        protected ACLMessage prepareResponse(ACLMessage request) throws NotUnderstoodException, RefuseException {
+
+            artifacts.add(artifact1);
+            artifacts.add(artifact2);
+            artifacts.add(artifact3);
+            ACLMessage reply = request.createReply();
+            ArrayList<Artifacts> a = new ArrayList<Artifacts>();
+            try {
+
+                ArrayList<String> interestedArtifacts = (ArrayList<String>) request.getContentObject();
+                for(int i = 0; i<interestedArtifacts.size(); i++){
+
+                    for(int j = 0; j< artifacts.size(); j++){
+                        if(artifacts.get(j).getId().equalsIgnoreCase(interestedArtifacts.get(i))){
+                             a.add(i, artifacts.get(j));
+
+                        }
+                    }
+                }
+                System.out.println("i curator och får a" + a.get(0));
+                reply.setContentObject(a);
+                reply.setPerformative(ACLMessage.AGREE);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return reply;
+        }
+
+        @Override
+        protected ACLMessage prepareResultNotification(ACLMessage request, ACLMessage response) throws FailureException {
+
+            return response;
+        }
+    }
+
+
+
+
 }

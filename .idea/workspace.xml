@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1053bfd-a0f2-43ed-884c-bac7bef83974" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HW1DistAI/RespondPerformerCuratorAgent.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" />
     </list>
     <list id="7390e16e-6f6c-4cb4-8026-8ef57ba7ac81" name="Never ever push" comment="" />
     <list id="212b2f8f-9aec-4cf8-963b-481ecb8517bb" name="never ever commit" comment="" />
@@ -31,21 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProfilerAgent.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProfilerAgent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="108" column="81" selection-start-line="108" selection-start-column="81" selection-end-line="108" selection-end-column="81" />
+            <state relative-caret-position="285">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-                <element signature="class#1621:3757" expanded="false" />
-                <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-                <element signature="e#4155#4156#0" expanded="true" />
-                <element signature="e#4192#4193#0" expanded="true" />
-                <element signature="e#4272#4273#0" expanded="true" />
-                <element signature="e#4328#4329#0" expanded="true" />
-                <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+                <element signature="e#1266#1844#0" expanded="true" />
+                <element signature="e#1843#1844#0" expanded="true" />
+                <element signature="e#4065#4066#0" expanded="true" />
+                <element signature="e#4102#4103#0" expanded="true" />
+                <element signature="e#4183#4184#0" expanded="true" />
+                <element signature="e#4239#4240#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +51,8 @@
       <file leaf-file-name="TourGuideAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="1380">
+              <caret line="128" column="129" selection-start-line="128" selection-start-column="129" selection-end-line="128" selection-end-column="129" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,36 +60,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CuratorAgent.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CuratorAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="153">
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
-                <element signature="class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-                <element signature="e#1844#1855#0" expanded="true" />
-                <element signature="method#prepareResponse#0;class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-                <element signature="e#2360#2368#0" expanded="true" />
+                <element signature="e#2201#2202#0" expanded="true" />
+                <element signature="e#2237#2238#0" expanded="true" />
+                <element signature="e#2711#2722#0" expanded="true" />
+                <element signature="e#2981#2989#0" expanded="true" />
+                <element signature="e#4470#4481#0" expanded="true" />
+                <element signature="e#4945#4956#0" expanded="true" />
+                <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestPerformerTourGuideAgent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HW1DistAI/RequestPerformerTourGuideAgent.java">
+      <file leaf-file-name="Artifacts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="43" />
-              <folding>
-                <element signature="docComment;class#RequestPerformerTourGuideAgent#0" expanded="false" />
-                <element signature="method#prepareRequest#0;class#RequestPerformerTourGuideAgent#0" expanded="false" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1520#1521#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,12 +118,12 @@
         <option value="$PROJECT_DIR$/src/HW1DistAI/RespondPerformer.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RequestPerformer.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RespondPerformerProfilerAgent.java" />
-        <option value="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RespondPerformerTourGuideAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RequestPerformerProfilerAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RequestPerformerTourGuideAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RespondPerformerCuratorAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" />
+        <option value="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" />
       </list>
@@ -151,10 +143,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-109" />
-    <option name="y" value="24" />
-    <option name="width" value="1579" />
-    <option name="height" value="822" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="846" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -755,7 +746,7 @@
       <workItem from="1478872627798" duration="11573000" />
       <workItem from="1478952396456" duration="19267000" />
       <workItem from="1479032069298" duration="22785000" />
-      <workItem from="1479117299579" duration="11113000" />
+      <workItem from="1479117299579" duration="22801000" />
     </task>
     <task id="LOCAL-00001" summary="nt">
       <created>1478693300797</created>
@@ -911,29 +902,36 @@
       <option name="project" value="LOCAL" />
       <updated>1479127240032</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="communication between tour guide and curator agent is working">
+      <created>1479129794528</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1479129794528</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84172000" />
+    <option name="totallyTimeSpent" value="95860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-109" y="24" width="1579" height="822" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="846" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32625994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29045093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30503145" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20039037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -978,7 +976,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -993,14 +991,12 @@
           <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1039,11 +1035,13 @@
           <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#1844#1855#0" expanded="true" />
-            <element signature="method#prepareResponse#0;class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#2360#2368#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2711#2722#0" expanded="true" />
+            <element signature="e#2981#2989#0" expanded="true" />
+            <element signature="e#4470#4481#0" expanded="true" />
+            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1062,9 +1060,11 @@
           <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
           <folding>
             <element signature="docComment;class#RequestPerformerTourGuideAgent#0" expanded="false" />
-            <element signature="method#prepareRequest#0;class#RequestPerformerTourGuideAgent#0" expanded="false" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
             <element signature="e#733#734#0" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
+            <element signature="method#handleAgree#0;class#RequestPerformerTourGuideAgent#0" expanded="false" />
             <element signature="e#1499#1500#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
           </folding>
@@ -1087,14 +1087,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1133,14 +1131,12 @@
           <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1169,11 +1165,13 @@
           <caret line="6" column="10" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#1844#1855#0" expanded="true" />
-            <element signature="method#prepareResponse#0;class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#2360#2368#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2711#2722#0" expanded="true" />
+            <element signature="e#2981#2989#0" expanded="true" />
+            <element signature="e#4470#4481#0" expanded="true" />
+            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,14 +1191,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1221,11 +1217,13 @@
           <caret line="6" column="10" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#1844#1855#0" expanded="true" />
-            <element signature="method#prepareResponse#0;class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#2360#2368#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2711#2722#0" expanded="true" />
+            <element signature="e#2981#2989#0" expanded="true" />
+            <element signature="e#4470#4481#0" expanded="true" />
+            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,14 +1243,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1263,14 +1259,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1281,14 +1275,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1299,14 +1291,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1317,14 +1307,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1335,14 +1323,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1364,14 +1350,6 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Downloads/jade/lib/jade.jar!/jade/core/behaviours/Behaviour.class" />
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HW1DistAI/RequestPerformerProfilerAgent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1400,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HW1DistAI/RespondPerformerCuratorAgent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1418,50 +1386,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="108" column="81" selection-start-line="108" selection-start-column="81" selection-end-line="108" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="class#1621:3757" expanded="false" />
-            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4272#4273#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="method#handleInform#0;class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HW1DistAI/RequestPerformerTourGuideAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="-51">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#RequestPerformerTourGuideAgent#0" expanded="false" />
-            <element signature="method#prepareRequest#0;class#RequestPerformerTourGuideAgent#0" expanded="false" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
             <element signature="e#733#734#0" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
+            <element signature="method#handleAgree#0;class#RequestPerformerTourGuideAgent#0" expanded="false" />
             <element signature="e#1499#1500#0" expanded="true" />
             <element signature="e#1520#1521#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="1380">
+          <caret line="128" column="129" selection-start-line="128" selection-start-column="129" selection-end-line="128" selection-end-column="129" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#1844#1855#0" expanded="true" />
-            <element signature="method#prepareResponse#0;class#RespondPerformerCuratorAgent#0;class#CuratorAgent#0" expanded="false" />
-            <element signature="e#2360#2368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2711#2722#0" expanded="true" />
+            <element signature="e#2981#2989#0" expanded="true" />
+            <element signature="e#4470#4481#0" expanded="true" />
+            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1266#1844#0" expanded="true" />
+            <element signature="e#1843#1844#0" expanded="true" />
+            <element signature="e#4065#4066#0" expanded="true" />
+            <element signature="e#4102#4103#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>

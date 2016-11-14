@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Amir on 2016-11-09.
  */
-public class Artifacts  {
+public class Artifacts implements Serializable {
     String id;
     String artist;
     String type;
