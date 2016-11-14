@@ -13,7 +13,6 @@ import jade.domain.FIPAException;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import jade.lang.acl.UnreadableException;
 import jade.proto.SimpleAchieveREInitiator;
 import java.util.*;
 
@@ -21,7 +20,7 @@ import java.util.*;
  * Created by Amir and Araxi on 2016-11-09.
  */
 
-/*Per, male, 15, Davinci, nerd, hola, bandola*/
+/* Argument input: Per, male, 15, Davinci, nerd, hola, bandola */
 
 public class ProfilerAgent extends Agent  {
 
@@ -58,7 +57,11 @@ public class ProfilerAgent extends Agent  {
                         }
                     }
                 }
-            });
+
+            }
+
+            );
+
 
             addBehaviour(new TickerBehaviour(this, 1000)  {
                 protected void onTick() {
@@ -95,18 +98,18 @@ public class ProfilerAgent extends Agent  {
                         request.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
                         request.setConversationId("request-virtual-tour");
 
+                    System.out.println("I have "+ interest +" as interest and want a virtual tour");
+
                         /* request a virtual tour*/
                         myAgent.addBehaviour(new RequestPerformerProfilerAgent(myAgent, request));
 
-
+                    stop();
 
             }});
         }else{ System.out.println("Nothing to do.. lets terminate "); doDelete(); }
 
     }
-    protected void takeDown(){
-        System.out.println("The agent " + a1.getName() + " will be terminated");
-    }
+
 
 
     private class RequestPerformerProfilerAgent extends SimpleAchieveREInitiator {
@@ -149,12 +152,14 @@ public class ProfilerAgent extends Agent  {
                     ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.AGREE));
                     if (receive != null) {
                         ArrayList<Artifacts> information = (ArrayList<Artifacts>) receive.getContentObject();
-                        System.out.println("The virtual tour is " );
+                        System.out.println("The requested virtual tour is:");
                         for (int j = 0; j< information.size(); j++ ){
-                            System.out.println(information.get(j).getId() + " " + information.get(j).getArtist() + " " +
-                                    information.get(j).getType() + " " + information.get(j).getYear());
+                            System.out.println(information.get(j).getId() + ": ARTIST: " + information.get(j).getArtist() + " TYPE: " +
+                                    information.get(j).getType() + " YEAR: " + information.get(j).getYear());
                         }
                     }
+
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();

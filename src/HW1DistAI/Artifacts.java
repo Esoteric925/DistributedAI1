@@ -3,7 +3,7 @@ package HW1DistAI;
 import java.io.Serializable;
 
 /**
- * Created by Amir on 2016-11-09.
+ * Created by Amir and Araxi on 2016-11-09.
  */
 public class Artifacts implements Serializable {
     String id;

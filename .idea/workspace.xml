@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1053bfd-a0f2-43ed-884c-bac7bef83974" name="Default" comment="">
+    <list default="true" id="a1053bfd-a0f2-43ed-884c-bac7bef83974" name="Default" comment="final">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" afterPath="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" />
     </list>
     <list id="7390e16e-6f6c-4cb4-8026-8ef57ba7ac81" name="Never ever push" comment="" />
     <list id="212b2f8f-9aec-4cf8-963b-481ecb8517bb" name="never ever commit" comment="" />
@@ -33,16 +34,18 @@
       <file leaf-file-name="ProfilerAgent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="105">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="62" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1266#1844#0" expanded="true" />
-                <element signature="e#1843#1844#0" expanded="true" />
-                <element signature="e#4065#4066#0" expanded="true" />
-                <element signature="e#4102#4103#0" expanded="true" />
-                <element signature="e#4183#4184#0" expanded="true" />
-                <element signature="e#4239#4240#0" expanded="true" />
+                <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+                <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+                <element signature="e#1242#1821#0" expanded="true" />
+                <element signature="e#1820#1821#0" expanded="true" />
+                <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+                <element signature="e#4069#4070#0" expanded="true" />
+                <element signature="e#4106#4107#0" expanded="true" />
+                <element signature="e#4187#4188#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,10 +54,11 @@
       <file leaf-file-name="TourGuideAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="128" column="129" selection-start-line="128" selection-start-column="129" selection-end-line="128" selection-end-column="129" />
+            <state relative-caret-position="30">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+                <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -63,16 +67,20 @@
       <file leaf-file-name="CuratorAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2201#2202#0" expanded="true" />
-                <element signature="e#2237#2238#0" expanded="true" />
-                <element signature="e#2711#2722#0" expanded="true" />
-                <element signature="e#2981#2989#0" expanded="true" />
-                <element signature="e#4470#4481#0" expanded="true" />
-                <element signature="e#4945#4956#0" expanded="true" />
+                <element signature="docComment;class#CuratorAgent#0" expanded="false" />
+                <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="method#prepareResponse#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="e#2542#2553#0" expanded="true" />
+                <element signature="e#2735#2743#0" expanded="true" />
+                <element signature="method#prepareResultNotification#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="e#4111#4122#0" expanded="true" />
+                <element signature="method#prepareResponse#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+                <element signature="e#4585#4596#0" expanded="true" />
                 <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
               </folding>
             </state>
@@ -82,9 +90,12 @@
       <file leaf-file-name="Artifacts.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#Artifacts#0" expanded="false" />
+                <element signature="method#Artifacts#0;class#Artifacts#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,10 +133,10 @@
         <option value="$PROJECT_DIR$/src/HW1DistAI/RequestPerformerProfilerAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RequestPerformerTourGuideAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/RespondPerformerCuratorAgent.java" />
-        <option value="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/Artifacts.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java" />
         <option value="$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java" />
+        <option value="$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java" />
       </list>
     </option>
   </component>
@@ -746,7 +757,7 @@
       <workItem from="1478872627798" duration="11573000" />
       <workItem from="1478952396456" duration="19267000" />
       <workItem from="1479032069298" duration="22785000" />
-      <workItem from="1479117299579" duration="22801000" />
+      <workItem from="1479117299579" duration="25640000" />
     </task>
     <task id="LOCAL-00001" summary="nt">
       <created>1478693300797</created>
@@ -909,11 +920,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479129794528</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="final">
+      <created>1479146571935</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1479146571935</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95860000" />
+    <option name="totallyTimeSpent" value="98699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="846" extended-state="0" />
@@ -971,12 +989,13 @@
     <MESSAGE value="trying to implement simplereintiator/responder" />
     <MESSAGE value="got messaging working" />
     <MESSAGE value="communication between tour guide and curator agent is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="communication between tour guide and curator agent is working" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -990,13 +1009,15 @@
         <state relative-caret-position="495">
           <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,7 +1027,8 @@
         <state relative-caret-position="1725">
           <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1034,13 +1056,17 @@
         <state relative-caret-position="885">
           <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-            <element signature="e#2711#2722#0" expanded="true" />
-            <element signature="e#2981#2989#0" expanded="true" />
-            <element signature="e#4470#4481#0" expanded="true" />
-            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="docComment;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#prepareResponse#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#2542#2553#0" expanded="true" />
+            <element signature="e#2735#2743#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4111#4122#0" expanded="true" />
+            <element signature="method#prepareResponse#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4585#4596#0" expanded="true" />
             <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
@@ -1086,13 +1112,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1102,7 +1130,8 @@
         <state relative-caret-position="675">
           <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1130,13 +1159,15 @@
         <state relative-caret-position="1395">
           <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1154,7 +1185,8 @@
         <state relative-caret-position="360">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1164,13 +1196,17 @@
         <state relative-caret-position="90">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-            <element signature="e#2711#2722#0" expanded="true" />
-            <element signature="e#2981#2989#0" expanded="true" />
-            <element signature="e#4470#4481#0" expanded="true" />
-            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="docComment;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#prepareResponse#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#2542#2553#0" expanded="true" />
+            <element signature="e#2735#2743#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4111#4122#0" expanded="true" />
+            <element signature="method#prepareResponse#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4585#4596#0" expanded="true" />
             <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
@@ -1190,13 +1226,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1206,7 +1244,8 @@
         <state relative-caret-position="240">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1216,13 +1255,17 @@
         <state relative-caret-position="90">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-            <element signature="e#2711#2722#0" expanded="true" />
-            <element signature="e#2981#2989#0" expanded="true" />
-            <element signature="e#4470#4481#0" expanded="true" />
-            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="docComment;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#prepareResponse#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#2542#2553#0" expanded="true" />
+            <element signature="e#2735#2743#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4111#4122#0" expanded="true" />
+            <element signature="method#prepareResponse#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4585#4596#0" expanded="true" />
             <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
@@ -1242,13 +1285,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1258,13 +1303,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1274,13 +1321,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1290,13 +1339,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1306,13 +1357,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1322,13 +1375,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1403,36 +1458,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="128" column="129" selection-start-line="128" selection-start-column="129" selection-end-line="128" selection-end-column="129" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Artifacts#0" expanded="false" />
+            <element signature="method#Artifacts#0;class#Artifacts#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/Artifacts.java">
+    <entry file="file://$PROJECT_DIR$/src/HW1DistAI/TourGuideAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;class#TourGuideAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#TourGuideAgent#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HW1DistAI/CuratorAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2201#2202#0" expanded="true" />
-            <element signature="e#2237#2238#0" expanded="true" />
-            <element signature="e#2711#2722#0" expanded="true" />
-            <element signature="e#2981#2989#0" expanded="true" />
-            <element signature="e#4470#4481#0" expanded="true" />
-            <element signature="e#4945#4956#0" expanded="true" />
+            <element signature="docComment;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="method#prepareResponse#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#2542#2553#0" expanded="true" />
+            <element signature="e#2735#2743#0" expanded="true" />
+            <element signature="method#prepareResultNotification#0;class#RespondToTourGuideAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4111#4122#0" expanded="true" />
+            <element signature="method#prepareResponse#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
+            <element signature="e#4585#4596#0" expanded="true" />
             <element signature="method#prepareResultNotification#0;class#RespondToProfilerAgent#0;class#CuratorAgent#0" expanded="false" />
           </folding>
         </state>
@@ -1440,16 +1503,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HW1DistAI/ProfilerAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="105">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1266#1844#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="docComment;class#ProfilerAgent#0" expanded="false" />
+            <element signature="method#setup#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#1242#1821#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="class#RequestPerformerProfilerAgent#0;class#ProfilerAgent#0" expanded="false" />
+            <element signature="e#4069#4070#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
           </folding>
         </state>
       </provider>
