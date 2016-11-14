@@ -12,6 +12,8 @@ import jade.domain.FIPAException;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import jade.lang.acl.UnreadableException;
+import jade.proto.SimpleAchieveREInitiator;
 
 
 import java.util.*;
@@ -63,7 +65,6 @@ public class ProfilerAgent extends Agent {
                         sc.setMaxResults(new Long(1));
                         send(DFService.createSubscriptionMessage(myAgent, getDefaultDF(), dfd, sc));
 
-
                         try {
                             //find agents that provides the virtual tour service
                             DFAgentDescription[] result = DFService.search(myAgent, dfd);
@@ -77,7 +78,6 @@ public class ProfilerAgent extends Agent {
                             for (int i = 0; i < tourGuideAgents.length; i++) {
                                 System.out.println("Tour guide agent #" + i + " is " + tourGuideAgents[i].getName());
                             }
-
                             ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 
                             for(int i = 0; i < tourGuideAgents.length; i++) {
@@ -87,24 +87,52 @@ public class ProfilerAgent extends Agent {
                             request.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
                             request.setConversationId("request-virtual-tour");
                             myAgent.addBehaviour(new RequestPerformerProfilerAgent(myAgent, request));
+
+
+
                         } catch (FIPAException e) {
                             e.printStackTrace();
                             System.out.println("Det blev fel");
                         }
-
                     }
                 });
-
         }else{
             System.out.println("Nothing to do.. lets terminate ");
             doDelete();
         }
     }
-
-
     protected void takeDown(){
-
         System.out.println("The agent " + a1.getName() + " will be terminated");
     }
 
+
+    private class RequestPerformerProfilerAgent extends SimpleAchieveREInitiator {
+        public RequestPerformerProfilerAgent(Agent a, ACLMessage msg) {
+            super(a, msg);
+        }
+        @Override
+        protected ACLMessage prepareRequest(ACLMessage msg) {
+            return super.prepareRequest(msg);
+        }
+        @Override
+        protected void handleInform(ACLMessage msg) {
+            try {
+                System.out.println("Message som mottogs i profiler agent " + msg.getContentObject());
+            } catch (UnreadableException e) {
+                e.printStackTrace();
+            }
+             System.out.println("Vi är i handleInform" + msg.getContent());
+            super.handleInform(msg);
+        }
+        @Override
+        protected void handleAgree(ACLMessage msg) {
+            try {
+                System.out.println("Message som mottogs i profiler agent HHHDAHDIHADIHDAIHAID " + msg.getContentObject());
+            } catch (UnreadableException e) {
+                e.printStackTrace();
+            }
+            super.handleAgree(msg);
+        }
+    }
 }
+

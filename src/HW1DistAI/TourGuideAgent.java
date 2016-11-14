@@ -11,6 +11,12 @@ import jade.domain.FIPAException;
 import jade.domain.FIPANames;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import jade.lang.acl.UnreadableException;
+import jade.proto.SimpleAchieveREInitiator;
+import jade.proto.states.MsgReceiver;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Amir on 2016-11-09.
@@ -21,8 +27,8 @@ public class TourGuideAgent extends Agent {
     private AID a1 = new AID("TourGuideAgent", AID.ISLOCALNAME);
     MessageTemplate template = MessageTemplate.and(
             MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
-            MessageTemplate.MatchPerformative(ACLMessage.REQUEST)
-             );
+            MessageTemplate.MatchPerformative(ACLMessage.REQUEST) );
+
     AID[] curatorAgents;
 
     protected void setup() {
@@ -41,90 +47,100 @@ public class TourGuideAgent extends Agent {
         }
 
 
+        DFAgentDescription dfd1 = new DFAgentDescription();
+        ServiceDescription sd1 = new ServiceDescription();
 
+        sd1.setType("Artifacts");
+        dfd1.addServices(sd1);
+        SearchConstraints sc = new SearchConstraints();
+        sc.setMaxResults(new Long(1));
+        send(DFService.createSubscriptionMessage(this, getDefaultDF(), dfd1, sc));
 
-        addBehaviour(new CyclicBehaviour(this) {
+        try {
+            DFAgentDescription[] result = DFService.search(this, dfd1);
+            curatorAgents = new AID[result.length];
 
-            ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
-
-
-            @Override
-            public void action() {
-
-
-
-                if (receive != null) {
-                  //  System.out.println("Agent "+getLocalName()+": REQUEST received from "+receive.getSender().getName()+". Action is "
-                   //         +receive.getContent());
-
-
-                    addBehaviour(new RespondPerformerTourGuideAgent(myAgent, template));
-
-                   done();
-
-
-                }
+            for (int i = 0; i < curatorAgents.length; i++) {
+                curatorAgents[i] = result[i].getName();
             }
-        });
+        } catch (FIPAException e) {
+            e.printStackTrace();
+        }
 
-        addBehaviour(new CyclicBehaviour() {
 
-            ACLMessage receive = blockingReceive(MessageTemplate.MatchPerformative(ACLMessage.REQUEST));
-
+        addBehaviour(new MsgReceiver(this, template, Long.MAX_VALUE, null, null){
             @Override
-            public void action() {
-                DFAgentDescription dfd = new DFAgentDescription();
-                ServiceDescription sd = new ServiceDescription();
 
-                sd.setType("Artifacts");
-                dfd.addServices(sd);
-                SearchConstraints sc = new SearchConstraints();
-                sc.setMaxResults(new Long(1));
-                send(DFService.createSubscriptionMessage(myAgent, getDefaultDF(), dfd, sc));
+            protected void handleMessage(final ACLMessage msg) {
 
-
-                try {
-                    DFAgentDescription[] result = DFService.search(myAgent, dfd);
-                    curatorAgents = new AID[result.length];
-
-                    for (int i = 0; i < curatorAgents.length; i++) {
-                        curatorAgents[i] = result[i].getName();
-                    }
-
-
-                    ACLMessage requestArtifacts = new ACLMessage(ACLMessage.REQUEST);
-                    for(int i = 0; i < curatorAgents.length; i++) {
-                        requestArtifacts.addReceiver(curatorAgents[i]);
-                    }
-                    //  for (int i = 0; i < curatorAgents.length; i++) {
-                    //      System.out.println("Curator agent #" + i + " is " + curatorAgents[i].getName());
-                    //  }
-                    requestArtifacts.setContent(receive.getContent());
-                    requestArtifacts.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
-                    requestArtifacts.setConversationId("request-artifacts");
-                    myAgent.addBehaviour(new RequestPerformerTourGuideAgent(myAgent, requestArtifacts));
-
-                } catch (FIPAException e) {
-                    e.printStackTrace();
+                System.out.println("I MSGRECEIVER FÖRVÄNTAR MIG DAVINCI OCH FÅR " + msg.getContent());
+                ACLMessage requestArtifacts = new ACLMessage(ACLMessage.REQUEST);
+                for(int i = 0; i < curatorAgents.length; i++) {
+                    requestArtifacts.addReceiver(curatorAgents[i]);
                 }
+                requestArtifacts.setContent(msg.getContent());
+                requestArtifacts.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+                requestArtifacts.setConversationId("request-artifacts");
+                final ACLMessage profilerMsg = msg;
+                msg.createReply();
+                msg.setContent("HEJEHEJEJJE");
+                send(msg);
 
+                myAgent.addBehaviour(new SimpleAchieveREInitiator(myAgent, requestArtifacts){
 
+                                         @Override
+                                         protected ACLMessage prepareRequest(ACLMessage msg) {
 
+                                         //System.out.println("Vi är i tourguide och ska skicka ett msg till curator som är " + msg.getContent());
+                                             return super.prepareRequest(msg);
+                                         }
 
+                                         @Override
+                                         protected void handleInform(ACLMessage msg) {
+                                             try {
+
+                                                 ArrayList<String> as = (ArrayList<String>) msg.getContentObject();
+                                                 for(int i = 0; i <as.size(); i++ ){
+                                                     System.out.println("är i tourguidagent med arraylistan av paintings " + as.get(i));
+
+                                                 }
+                                                 //ACLMessage replyProfiler = new ACLMessage(ACLMessage.INFORM);
+                                                 //replyProfiler.addReceiver(profiler);
+  //  System.out.println("profilermsg innan " + profilerMsg.getContent());
+            //                                     profilerMsg.createReply();
+          //                                       profilerMsg.setContentObject(as);
+
+                                            //     System.out.println("profilermsg efter" + profilerMsg.getContentObject());
+                                             //    System.out.println("recievern för profilermsg e " + profilerMsg.getSender());
+                                           //      send(profilerMsg);
+
+                                             } catch (Exception e) {
+                                                 e.printStackTrace();
+                                             }
+
+                                             super.handleInform(msg);
+                                         }
+
+                                         @Override
+                                         protected void handleAgree(ACLMessage msg) {
+                                             try {
+                                                 System.out.println("ÄR I SIMPLEBEHAVIOIR I AGREE O FÖRVÄNTAR MIG ARRAYLIST");
+                                                 ArrayList<String> as = (ArrayList<String>) msg.getContentObject();
+                                                 for(int i = 0; i <as.size(); i++ ){
+                                                     System.out.println("är i tourguidagent med arraylistan av paintings " + as.get(i));
+
+                                                 }
+                                             } catch (UnreadableException e) {
+                                                 e.printStackTrace();
+                                             }
+                                             super.handleAgree(msg);
+                                         }
+                                     }
+                );
+
+                super.handleMessage(msg);
             }
+
         });
-
-
-
-
-        //   System.out.println("Hello " + a1.getName());
-
-    }
-
-    private boolean checkAction(String msg) {
-        // Simulate a check by generating a random number
-
-
-        return (Math.random() > 0.2);
     }
 }
