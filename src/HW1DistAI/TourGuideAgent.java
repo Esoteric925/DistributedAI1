@@ -71,7 +71,7 @@ public class TourGuideAgent extends Agent {
         addBehaviour(new MsgReceiver(this, template, Long.MAX_VALUE, null, null){
             @Override
 
-            protected void handleMessage(final ACLMessage msg) {
+            protected void handleMessage( ACLMessage msg) {
 
                 System.out.println("I MSGRECEIVER FÖRVÄNTAR MIG DAVINCI OCH FÅR " + msg.getContent());
                 ACLMessage requestArtifacts = new ACLMessage(ACLMessage.REQUEST);
@@ -81,10 +81,8 @@ public class TourGuideAgent extends Agent {
                 requestArtifacts.setContent(msg.getContent());
                 requestArtifacts.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
                 requestArtifacts.setConversationId("request-artifacts");
-                final ACLMessage profilerMsg = msg;
-                msg.createReply();
-                msg.setContent("HEJEHEJEJJE");
-                send(msg);
+                 final ACLMessage profilerMsg = msg;
+
 
                 myAgent.addBehaviour(new SimpleAchieveREInitiator(myAgent, requestArtifacts){
 
@@ -106,13 +104,14 @@ public class TourGuideAgent extends Agent {
                                                  }
                                                  //ACLMessage replyProfiler = new ACLMessage(ACLMessage.INFORM);
                                                  //replyProfiler.addReceiver(profiler);
-  //  System.out.println("profilermsg innan " + profilerMsg.getContent());
-            //                                     profilerMsg.createReply();
-          //                                       profilerMsg.setContentObject(as);
-
-                                            //     System.out.println("profilermsg efter" + profilerMsg.getContentObject());
+                             System.out.println("profilermsg innan " + profilerMsg.getContent());
+                                                 ACLMessage message = profilerMsg.createReply();
+                                              message.setContentObject(as);
+                                                 message.setPerformative(ACLMessage.INFORM);
+                                              //   message.setSender(profilerMsg.getSender());
+//                                              System.out.println("profilermsg efter" + profilerMsg.getContentObject());
                                              //    System.out.println("recievern för profilermsg e " + profilerMsg.getSender());
-                                           //      send(profilerMsg);
+                                                 send(message);
 
                                              } catch (Exception e) {
                                                  e.printStackTrace();
@@ -136,10 +135,15 @@ public class TourGuideAgent extends Agent {
                                              super.handleAgree(msg);
                                          }
                                      }
+
+
                 );
 
                 super.handleMessage(msg);
             }
+
+
+
 
         });
     }

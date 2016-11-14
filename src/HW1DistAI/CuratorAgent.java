@@ -24,15 +24,10 @@ public class CuratorAgent extends Agent {
 
    private AID a1 = new AID("CuratorAgent", AID.ISLOCALNAME);
 
-
-
     MessageTemplate template = MessageTemplate.and(
             MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
             MessageTemplate.MatchPerformative(ACLMessage.REQUEST)
     );
-
-
-
 
     protected void setup(){
 

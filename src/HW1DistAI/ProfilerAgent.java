@@ -76,7 +76,7 @@ public class ProfilerAgent extends Agent {
                                 tourGuideAgents[i] = result[i].getName();
                             }
                             for (int i = 0; i < tourGuideAgents.length; i++) {
-                                System.out.println("Tour guide agent #" + i + " is " + tourGuideAgents[i].getName());
+                              //  System.out.println("Tour guide agent #" + i + " is " + tourGuideAgents[i].getName());
                             }
                             ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 
@@ -121,18 +121,9 @@ public class ProfilerAgent extends Agent {
             } catch (UnreadableException e) {
                 e.printStackTrace();
             }
-             System.out.println("Vi är i handleInform" + msg.getContent());
             super.handleInform(msg);
         }
-        @Override
-        protected void handleAgree(ACLMessage msg) {
-            try {
-                System.out.println("Message som mottogs i profiler agent HHHDAHDIHADIHDAIHAID " + msg.getContentObject());
-            } catch (UnreadableException e) {
-                e.printStackTrace();
-            }
-            super.handleAgree(msg);
-        }
+
     }
 }
 
